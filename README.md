@@ -9,6 +9,7 @@
   <img align="center" alt="bryan-GCP" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg">
   <img align="center" alt="bryan-Firebase" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg">
 </div>
+
 <br>
 
 <div> 
