@@ -3,12 +3,11 @@
 <h3>Desenvolvedor de Software apaixonado por tecnologia</h3>
 
 <p>
-Construo aplicações web e mobile, automações e soluções digitais. Sempre aprendendo, criando projetos e buscando novos desafios.
+Construo aplicações web e mobile, automações e soluções digitais.<br>Sempre aprendendo, criando projetos e buscando novos desafios.
 </p>
+<br>
 
-<h2>Tecnologias</h2>
 
-<p>
 <img alt="Node.js" title="Node.js" height="38" width="48" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg">
 <img alt="React Native" title="React Native" height="38" width="48" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg">
 <img alt="TypeScript" title="TypeScript" height="38" width="48" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg">
@@ -33,7 +32,7 @@ Construo aplicações web e mobile, automações e soluções digitais. Sempre a
 
 <br>
 
-<img width="720" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=bryan-assuncao&theme=github_dark" alt="Resumo das contribuições de Bryan no GitHub">
+<img width="500 " src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=bryan-assuncao&theme=github_dark" alt="Resumo das contribuições de Bryan no GitHub">
 
 
 </div>
