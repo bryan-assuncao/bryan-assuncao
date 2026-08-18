@@ -1,12 +1,9 @@
 <div align="center">
 
-<h1>Olá! Eu sou o Bryan</h1>
-
 <h3>Desenvolvedor de Software apaixonado por tecnologia</h3>
 
 <p>
-Construo aplicações web e mobile, automações e soluções digitais.<br>
-Sempre aprendendo, criando projetos e buscando novos desafios.
+Construo aplicações web e mobile, automações e soluções digitais. Sempre aprendendo, criando projetos e buscando novos desafios.
 </p>
 
 <h2>Tecnologias</h2>
