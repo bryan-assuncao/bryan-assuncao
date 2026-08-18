@@ -33,7 +33,7 @@
 
   <!-- Card de Estatísticas do GitHub -->
   <a href="https://github.com/bryan-assuncao">
-    <img width="520" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=bryan-assuncao&theme=github_dark" alt="Resumo de Contribuições no GitHub">
+    <img width="630" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=bryan-assuncao&theme=github_dark" alt="Resumo de Contribuições no GitHub">
   </a>
 
 </div>
