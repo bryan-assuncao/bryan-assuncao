@@ -1,14 +1,7 @@
-<div align="center">
-
-  <!-- Header animado -->
-  <a href="https://bryanassuncao.dev">
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=180&section=header&text=Bryan%20Assunção&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Desenvolvedor%20de%20Software&descAlignY=62&descFontSize=20" alt="Bryan Assunção" width="100%"/>
-  </a>
-
-  <p>
+  <h3>
     Construo aplicações web, mobile, automações e soluções digitais de ponta a ponta.<br>
     Focado em arquitetura escalável, performance e código limpo.
-  </p>
+  </h3>
 
   <br>
 
