@@ -29,13 +29,4 @@
     <img width="630" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=bryan-assuncao&theme=github_dark" alt="Resumo de Contribuições no GitHub">
   </a>
 
-  <br>
-
-  <!-- Total de repositórios (público + privado), atualizado automaticamente por GitHub Actions -->
-  <p>
-    <!-- REPO-COUNT:START -->
-    <img src="https://img.shields.io/badge/Reposit%C3%B3rios%20no%20GitHub-26-2ea44f?style=for-the-badge&logo=github&logoColor=white" alt="Total de Repositorios">
-    <!-- REPO-COUNT:END -->
-  </p>
-
 </div>
