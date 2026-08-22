@@ -1,0 +1,78 @@
+name: Update total repo count
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-repo-count
+  cancel-in-progress: true
+
+jobs:
+  update-count:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Count all repositories (public + private)
+        id: count
+        env:
+          GH_TOKEN: ${{ secrets.REPO_COUNT_TOKEN }}
+        run: |
+          total=0
+          page=1
+          while : ; do
+            resp=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/user/repos?per_page=100&page=$page&affiliation=owner&visibility=all")
+            count=$(echo "$resp" | jq 'length')
+            if [ "$count" -eq 0 ]; then
+              break
+            fi
+            total=$((total + count))
+            page=$((page + 1))
+          done
+          echo "total=$total" >> "$GITHUB_OUTPUT"
+
+      - name: Update README badge
+        env:
+          TOTAL: ${{ steps.count.outputs.total }}
+        run: |
+          python3 <<'PYEOF'
+          import os, re
+          total = os.environ["TOTAL"]
+          badge = (
+              f'<img src="https://img.shields.io/badge/Reposit%C3%B3rios%20no%20GitHub-{total}-2ea44f'
+              f'?style=for-the-badge&logo=github&logoColor=white" alt="Total de Repositorios">'
+          )
+          with open("README.md", encoding="utf-8") as f:
+              content = f.read()
+          new_content = re.sub(
+              r"(<!-- REPO-COUNT:START -->)(.*?)(<!-- REPO-COUNT:END -->)",
+              lambda m: f"{m.group(1)}\n    {badge}\n    {m.group(3)}",
+              content,
+              flags=re.S,
+          )
+          with open("README.md", "w", encoding="utf-8") as f:
+              f.write(new_content)
+          PYEOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "Nenhuma mudanca no total de repositorios."
+          else
+            git commit -m "chore: atualiza total de repositorios para ${{ steps.count.outputs.total }}"
+            git push
+          fi
