@@ -19,7 +19,6 @@
   <!-- Stack de Tecnologias Padronizada -->
  <p>
     <img src="https://skillicons.dev/icons?i=nodejs,react,ts,js,python,java,aws,gcp,firebase,supabase&theme=dark" alt="Tecnologias" style="vertical-align: middle;" />
-    <img src="https://cdn.simpleicons.org/n8n/EA4B71" height="48" width="48" alt="n8n" style="vertical-align: middle; margin-left: 6px;" title="n8n"/>
   </p>
 
   <br>
